@@ -1,11 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>EFG Web App</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,43 +12,98 @@
 
     <div class="container">
 
-        <div class="login-box">
+        <!-- LOGIN BOX -->
+        <div class="login-box" id="loginBox">
 
             <h1>Welcome To EFG</h1>
 
             <form id="loginForm">
 
                 <div class="input-group">
-                    <label for="username">Username</label>
-
+                    <label for="loginUsername">Username</label>
                     <input
                         type="text"
-                        id="username"
-                        name="username"
+                        id="loginUsername"
                         placeholder="Enter username"
                         required
                     >
                 </div>
 
                 <div class="input-group">
-                    <label for="password">Password</label>
-
+                    <label for="loginPassword">Password</label>
                     <input
                         type="password"
-                        id="password"
-                        name="password"
+                        id="loginPassword"
                         placeholder="Enter password"
                         required
                     >
                 </div>
 
-                <button type="submit">
-                    Login
-                </button>
+                <button type="submit">Login</button>
 
             </form>
 
-            <p id="message"></p>
+            <p id="loginMessage"></p>
+
+            <p class="switch-text">
+                Don't have an account?
+                <button type="button" class="link-button" id="showRegister">
+                    Register
+                </button>
+            </p>
+
+        </div>
+
+
+        <!-- REGISTER BOX -->
+        <div class="login-box hidden" id="registerBox">
+
+            <h1>Create Account</h1>
+
+            <form id="registerForm">
+
+                <div class="input-group">
+                    <label for="registerUsername">Username</label>
+                    <input
+                        type="text"
+                        id="registerUsername"
+                        placeholder="Choose a username"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="registerPassword">Password</label>
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="Minimum 8 characters"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm your password"
+                        required
+                    >
+                </div>
+
+                <button type="submit">Create Account</button>
+
+            </form>
+
+            <p id="registerMessage"></p>
+
+            <p class="switch-text">
+                Already have an account?
+                <button type="button" class="link-button" id="showLogin">
+                    Login
+                </button>
+            </p>
 
         </div>
 
@@ -59,3 +113,5 @@
 
 </body>
 </html>
+```
+
